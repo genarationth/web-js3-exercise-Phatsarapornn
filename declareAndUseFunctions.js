@@ -57,9 +57,9 @@ function checkGrading (rubricN) {
     else if (rubricN >=0 && rubricN <5) {
         return false;
     }
-    else {
-        console.log("Adding number is incorrect.");
-    }
+    // else {
+    //     console.log("number is incorrect.");
+    // }
 }
 
 function gradingR(numberR) {
@@ -68,19 +68,22 @@ function gradingR(numberR) {
         if (rubric >8 && rubric <11) {
             console.log("Excellent");
         }
-        if (rubric === 11) {
+        else if (rubric === 11) {
             console.log("Perfect");
         } 
+        else {
+            console.log("Good");
+        }
     }
     else if (checkGrading(rubric) === false) {
-        console.log("Try again.Be Fighting!");
+        console.log("Try again. Be Fighting!");
     }
     else {
-        console.log("Input number again.");
+        console.log("number is incorrect.");
     }
     
     console.log(rubric);
 }
 
-gradingR(4);
+gradingR(-2);
 
